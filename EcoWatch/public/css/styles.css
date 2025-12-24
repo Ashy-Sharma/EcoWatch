@@ -144,7 +144,7 @@ body {
 
 /* HIDDEN */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* SLIDE ANIMATION */
@@ -316,3 +316,212 @@ footer {
     .qa-form { flex-direction: column; }
 }
 
+/* --- PETITION CARDS --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.petition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.petition-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.petition-card:hover {
+    transform: translateY(-5px);
+}
+
+.petition-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.petition-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.petition-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.petition-desc {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress-container {
+    background: #eee;
+    border-radius: 10px;
+    height: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: #0b5d1e;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.petition-stats {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.sign-btn {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 2px solid #0b5d1e;
+    color: #0b5d1e;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sign-btn:hover {
+    background: #0b5d1e;
+    color: white;
+}
+
+.create-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- MODALS --- */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-modal:hover { color: #333; }
+
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    background: #b30000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.primary-btn:hover { background: #920000; }
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* --- AUTH UI --- */
+.nav-btn {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.user-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.user-avatar {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Auth Buttons */
+.outline-btn {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 10px;
+}
+
+.outline-btn:hover {
+    background: white;
+    color: #0b5d1e;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: #0b5d1e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Force Hide for Modals */
+.hidden {
+    display: none !important;
+}
