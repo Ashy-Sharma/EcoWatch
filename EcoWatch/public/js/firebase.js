@@ -5,6 +5,9 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth
 
 
 // Your web app's Firebase configuration
+
+// APNA FIREBASE KA PROJECT BANAO AUR FIREBASE EK firebase.js wala file dega copy firebaseConfig and replace it with below firebaseConfig
+
 const firebaseConfig = {
   apiKey: "APNA FIREBASE KA API",
   authDomain: "APNA FIREBASE KA PROJECT KA DOMAIN",
@@ -21,4 +24,5 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 export const auth = getAuth(app);
+
 
